@@ -15,7 +15,7 @@ public class ExampleMain {
 
     private void run() throws SQLException, ClassNotFoundException {
         Class.forName("com.mysql.jdbc.Driver");
-        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/example?user=example&password=example&zeroDateTimeBehavior=convertToNull");
+        Connection connection = DriverManager.getConnection("jdbc:mysql://172.30.188.80/example?user=mysqluser&password=mysqluser&zeroDateTimeBehavior=convertToNull");
         Statement statement = connection.createStatement();
         ResultSet resultSet = statement.executeQuery("SELECT * FROM example.user");
         System.out.println("Printing schema for table: " + resultSet.getMetaData().getTableName(1));
